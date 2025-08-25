@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vida Leve · Livro de Dicas Profissionais para Perder Peso</title>
+  <meta name="description" content="Aprenda estratégias profissionais e sustentáveis para perder peso e viver de forma mais saudável. Livro prático com passos claros, cardápios, treinos simples e dicas de mentalidade." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0d11;
+      --panel:#11151b;
+      --accent:#24d07b;
+      --accent-2:#17b169;
+      --muted:#9aa4b2;
+      --text:#e7edf5;
+      --danger:#ff5a5f;
+      --warning:#ffb020;
+      --shadow:0 20px 50px rgba(0,0,0,.45);
+      --radius:22px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text);
+      background:radial-gradient(1200px 600px at 80% -10%, #14202a 0%, transparent 60%), var(--bg);
+      line-height:1.6;
+    }
+    a{color:inherit;text-decoration:none}
+    .container{width:min(1160px, 92vw);margin-inline:auto}
+    .btn{display:inline-flex;align-items:center;gap:.6rem;padding:14px 20px;border-radius:14px;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#06130d;font-weight:700;border:none;cursor:pointer;box-shadow:0 10px 25px rgba(36,208,123,.25);transition:transform .2s ease, box-shadow .2s ease}
+    .btn:hover{transform:translateY(-2px);box-shadow:0 16px 40px rgba(36,208,123,.35)}
+    .btn.ghost{background:transparent;border:1px solid #1f2937;color:var(--text);box-shadow:none}
+    .badge{display:inline-flex;align-items:center;gap:.5rem;background:#0f1720;border:1px solid #1f2836;padding:6px 10px;border-radius:999px;color:var(--muted);font-size:.85rem}
+    header{position:sticky;top:0;z-index:40;background:rgba(11,13,17,.55);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .logo{display:flex;align-items:center;gap:.7rem;font-weight:800;letter-spacing:.2px}
+    .logo-mark{width:34px;height:34px;border-radius:10px;background:conic-gradient(from 210deg, var(--accent), #82ffd1, #1d4ed8, #111827);display:grid;place-items:center;box-shadow:0 8px 25px rgba(36,208,123,.25)}
+    .logo-mark svg{width:20px;height:20px;fill:#06130d}
+    .nav-links{display:flex;gap:18px}
+    .nav-links a{color:var(--muted);font-weight:600;font-size:.95rem}
+    .hero{position:relative;padding:64px 0 36px}
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:46px;align-items:center}
+    .hero h1{font-size: clamp(1.8rem, 1.2rem + 3.2vw, 3.4rem);line-height:1.15;margin:0 0 16px}
+    .hero p{color:#c7d2df;font-size:clamp(1rem, .8rem + .5vw, 1.15rem)}
+    .hero-card{position:relative;border-radius:var(--radius);overflow:hidden;background:linear-gradient(180deg,#11181f, #0c1116);border:1px solid #1b2430;box-shadow:var(--shadow)}
+    .hero-card .media{aspect-ratio:4/5;display:block;background:#0d1319}
+    .hero-card img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(1.05)}
+    .hero-card .corner{position:absolute;inset:auto 14px 14px auto;background:rgba(0,0,0,.5);padding:8px 12px;border-radius:12px;border:1px solid rgba(255,255,255,.08);font-weight:700}
+    .cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:18px}
+    .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:28px}
+    .kpi{background:#0f1620;border:1px solid #1c2836;border-radius:16px;padding:16px 18px;text-align:center}
+    .kpi strong{font-size:1.4rem}
+
+    section{padding:60px 0}
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+    .panel{background:#0f151c;border:1px solid #192433;border-radius:18px;padding:24px;box-shadow:var(--shadow)}
+    .panel h3{margin:0 0 6px}
+    .muted{color:var(--muted)}
+
+    .grid-3{display:grid;grid-template-columns:repeat(3, 1fr);gap:18px}
+    .feature{background:#0f151c;border:1px solid #192433;border-radius:18px;padding:22px}
+
+    .testimonials{display:grid;grid-template-columns:repeat(3, 1fr);gap:18px}
+    .depo{background:#0f151c;border:1px solid #1b2635;border-radius:18px;padding:20px;display:flex;flex-direction:column;gap:12px}
+    .depo .meta{display:flex;align-items:center;gap:12px}
+    .avatar{width:40px;height:40px;border-radius:50%;overflow:hidden;border:1px solid #223047}
+    .stars{font-size:1rem;letter-spacing:1px}
+
+    .faq{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    details{background:#0f151c;border:1px solid #1b2635;border-radius:14px;padding:16px}
+    summary{cursor:pointer;font-weight:700}
+
+    .footer{padding:28px 0;border-top:1px solid rgba(255,255,255,.08);color:#9aa4b2}
+
+    .price-tag {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-top: 6px;
+    }
+
+    /* Toast/atividade (DEMO) */
+    .toast{position:fixed;left:20px;bottom:20px;z-index:60;display:flex;flex-direction:column;gap:10px;max-width:92vw}
+    .toast-item{display:flex;gap:12px;align-items:flex-start;background:rgba(16,22,29,.95);border:1px solid #1f2b3b;border-radius:14px;padding:12px 14px;box-shadow:var(--shadow);animation:slideIn .4s ease both}
+    .toast-item .chip{font-size:.7rem;background:#1d2a39;border:1px solid #2a3b52;color:#b8c4d2;padding:2px 6px;border-radius:999px}
+    .toast-item .tag-demo{font-size:.7rem;background:#302100;border:1px solid #5a4221;color:#ffcf7a;padding:2px 6px;border-radius:999px}
+    .toast-item strong{color:#eaf2fb}
+    .toast-item small{color:#9fb0c3}
+    @keyframes slideIn{from{transform:translateY(10px);opacity:0}to{transform:translateY(0);opacity:1}}
+
+    /* Responsivo */
+    @media (max-width: 980px){
+      .hero-grid{grid-template-columns:1fr;gap:28px}
+      .split{grid-template-columns:1fr}
+      .grid-3{grid-template-columns:1fr 1fr}
+      .testimonials{grid-template-columns:1fr 1fr}
+      .faq{grid-template-columns:1fr}
+      .kpis{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width: 640px){
+      .grid-3{grid-template-columns:1fr}
+      .testimonials{grid-template-columns:1fr}
+      .kpis{grid-template-columns:1fr 1fr}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="#" class="logo" aria-label="Vida Leve">
+        <span class="logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M3 12c5 0 5-9 9-9s4 9 9 9-4 9-9 9-4-9-9-9Z"/></svg>
+        </span>
+        <span>Vida Leve</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#beneficios">Benefícios</a>
+        <a href="#conteudo">Dentro do livro</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a href="#faq">FAQ</a>
+        <a href="#comprar" class="btn" style="padding:10px 14px">Comprar</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="badge">Novo · Método prático e sustentável</span>
+        <h1>Perca peso com segurança e <span style="color:var(--accent)">sem soluções milagrosas</span>.</h1>
+        <p>Um guia direto ao ponto com estratégias profissionais para perder peso de forma saudável: alimentação inteligente, treinos simples, organização da rotina e mentalidade para resultados que ficam.</p>
+        <div class="price-tag">Apenas R$ 27,90</div>
+        <div class="cta-row">
+          <a id="comprar" href="#" class="btn">Quero adquirir o livro</a>
+          <a href="#conteudo" class="btn ghost">Ver o que tem dentro</a>
+        </div>
+        <div class="kpis">
+          <div class="kpi"><strong>+180</strong><div class="muted">páginas práticas</div></div>
+          <div class="kpi"><strong>12</strong><div class="muted">planos de refeição</div></div>
+          <div class="kpi"><strong>28</strong><div class="muted">receitas fáceis</div></div>
+          <div class="kpi"><strong>8</strong><div class="muted">semanas de treinos</div></div>
+        </div>
+      </div>
+      <div>
+        <div class="hero-card">
+          <picture class="media">
+            <img src="https://images.unsplash.com/photo-1555244162-803834f70033?q=80&w=1200&auto=format&fit=crop" alt="Prato saudável com vegetais e proteínas.">
+          </picture>
+          <div class="corner">Edição 2025</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- O resto do site permanece igual -->
+  <!-- ... -->
+
+</body>
+</html>
