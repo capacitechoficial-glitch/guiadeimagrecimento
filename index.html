@@ -5,7 +5,220 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Aprenda dicas profissionais para perder peso e levar uma vida mais saudável. Ebook completo por apenas R$ 27,90!" />
   <title>Vida Leve · Ebook para Emagrecimento Saudável</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #fff;
+    }
+
+    /* Header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 10%;
+      background-color: #fff;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 700;
+      color: #2b9348;
+    }
+
+    .logo span {
+      color: #55a630;
+    }
+
+    .nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav a:hover {
+      color: #2b9348;
+    }
+
+    /* Hero */
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 50px 10%;
+      gap: 30px;
+      background-color: #f7fef7;
+    }
+
+    .hero-content {
+      flex: 1;
+    }
+
+    .hero-content h1 {
+      font-size: 36px;
+      color: #222;
+      margin-bottom: 15px;
+    }
+
+    .hero-content p {
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+
+    .preco {
+      font-size: 20px;
+      margin-bottom: 15px;
+      color: #2b9348;
+      font-weight: bold;
+    }
+
+    .hero-image img {
+      max-width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Botões */
+    .cta {
+      display: inline-block;
+      background-color: #2b9348;
+      color: #fff;
+      padding: 12px 30px;
+      font-size: 18px;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta:hover {
+      background-color: #208b3a;
+    }
+
+    .cta.grande {
+      padding: 15px 40px;
+      font-size: 22px;
+    }
+
+    /* Benefícios */
+    .beneficios {
+      padding: 60px 10%;
+      background-color: #fff;
+      text-align: center;
+    }
+
+    .benefit-grid {
+      display: flex;
+      gap: 30px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .benefit {
+      flex: 1;
+      max-width: 300px;
+    }
+
+    .benefit img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    /* Conteúdo */
+    .conteudo {
+      padding: 60px 10%;
+      background-color: #f7fef7;
+      text-align: center;
+    }
+
+    .conteudo ul {
+      list-style: none;
+      margin: 20px 0;
+    }
+
+    .conteudo li {
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+
+    /* Depoimentos */
+    .depoimentos {
+      padding: 60px 10%;
+      text-align: center;
+    }
+
+    .depoimentos-grid {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .card {
+      flex: 1;
+      max-width: 300px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    /* Comprar */
+    .comprar {
+      text-align: center;
+      padding: 60px 10%;
+      background-color: #2b9348;
+      color: #fff;
+    }
+
+    .comprar .preco {
+      font-size: 22px;
+      margin: 15px 0;
+    }
+
+    .riscado {
+      text-decoration: line-through;
+      opacity: 0.7;
+    }
+
+    /* Notificações */
+    .notificacoes {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      z-index: 1000;
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .benefit-grid,
+      .depoimentos-grid {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="header">
@@ -41,5 +254,99 @@
       <div class="benefit">
         <img src="https://source.unsplash.com/200x200/?fitness" alt="Exercícios">
         <h3>Plano de Exercícios</h3>
-        <p>Rec
+        <p>Receba treinos simples e eficazes para queimar gordura mais rápido.</p>
+      </div>
+      <div class="benefit">
+        <img src="https://source.unsplash.com/200x200/?motivation" alt="Motivação">
+        <h3>Motivação Constante</h3>
+        <p>Dicas para manter o foco e nunca mais desistir do seu objetivo.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="conteudo" class="conteudo">
+    <h2>O que você vai aprender</h2>
+    <ul>
+      <li>Como montar uma dieta personalizada</li>
+      <li>Receitas práticas e saborosas</li>
+      <li>Estratégias para acelerar o metabolismo</li>
+      <li>Hábitos saudáveis para manter os resultados</li>
+      <li>Plano de exercícios para iniciantes</li>
+    </ul>
+    <a href="https://pay.cakto.com.br/aytgzqh_541541" class="cta">Quero meu ebook por R$ 27,90</a>
+  </section>
+
+  <section id="depoimentos" class="depoimentos">
+    <h2>O que nossos leitores dizem</h2>
+    <div class="depoimentos-grid">
+      <div class="card">
+        <p>“Esse ebook mudou minha vida! Perdi 8kg em 2 meses e nunca me senti tão bem.”</p>
+        <span>- Juliana R., São Paulo</span>
+      </div>
+      <div class="card">
+        <p>“Fácil de entender e colocar em prática. Recomendo para todos!”</p>
+        <span>- Ricardo M., Curitiba</span>
+      </div>
+      <div class="card">
+        <p>“Adorei o plano de exercícios! Estou mais saudável e feliz.”</p>
+        <span>- Fernanda L., Salvador</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="comprar" class="comprar">
+    <h2>Garanta já seu exemplar!</h2>
+    <p class="preco">De <span class="riscado">R$ 59,90</span> por apenas <strong>R$ 27,90</strong></p>
+    <a href="https://pay.cakto.com.br/aytgzqh_541541" class="cta grande">Comprar agora</a>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 Vida Leve. Todos os direitos reservados.</p>
+  </footer>
+
+  <div id="notificacoes" class="notificacoes"></div>
+
+  <script>
+    // Notificações fake de compra
+    const nomes = ["Juliana", "Ricardo", "Fernanda", "Paulo", "Ana", "Sofia", "Gustavo", "Camila"];
+    const cidades = ["São Paulo", "Rio de Janeiro", "Salvador", "Curitiba", "Fortaleza", "Belo Horizonte"];
+    const mensagens = [
+      "Acabei de comprar e estou animada!",
+      "Esse ebook mudou minha vida!",
+      "Vale cada centavo, recomendo!",
+      "Recebi meu ebook e já comecei hoje!",
+      "Muito bom, dicas incríveis!",
+      "Melhor investimento que fiz este ano!",
+    ];
+
+    function gerarNotificacao() {
+      const container = document.getElementById("notificacoes");
+      const nome = nomes[Math.floor(Math.random() * nomes.length)];
+      const cidade = cidades[Math.floor(Math.random() * cidades.length)];
+      const mensagem = mensagens[Math.floor(Math.random() * mensagens.length)];
+
+      const div = document.createElement("div");
+      div.classList.add("notificacao");
+      div.innerHTML = `<strong>${nome}</strong> de ${cidade} diz: <em>“${mensagem}”</em>`;
+      div.style.cssText = `
+        background:#fff;
+        padding:10px 15px;
+        margin-top:10px;
+        box-shadow:0 3px 8px rgba(0,0,0,.15);
+        border-radius:10px;
+        font-size:14px;
+        max-width:250px;
+      `;
+
+      container.appendChild(div);
+
+      setTimeout(() => {
+        container.removeChild(div);
+      }, 5000);
+    }
+
+    setInterval(gerarNotificacao, 4000);
+  </script>
+</body>
+</html>
 
